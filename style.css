@@ -89,25 +89,23 @@ p, .sottotitolo {
 /* === SEZIONE COMPETENZE (Layout Verticale & Centrato) === */
 /* ==================================== */
 #competenze {
-    text-align: center; /* Centra il titolo principale H2 */
+    text-align: center; 
     margin-top: 40px;
     padding-top: 20px;
     border-top: 1px solid rgba(13, 27, 42, 0.1);
     
-    /* ✅ RIMOSSO Flexbox: tornerà al layout di blocco verticale per default */
-    display: block; 
-}
-
-/* Assicura che il titolo H2 vada a capo e sia centrato */
-#competenze > h2 { 
-    width: 100%;
+    /* ✅ FIX DEFINITIVO: Rimuove l'impostazione Flexbox forzando il layout verticale (display: block è il default, ma lo reimpostiamo per sicurezza) */
+    **display: block;**
+    /* Rimuoviamo le proprietà Flexbox residue */
+    **flex-wrap: nowrap;**
+    **justify-content: flex-start;**
 }
 
 /* Stile per le singole sottosezioni (Linguistiche, Programmazione, Tecniche) */
 #competenze section {
-    width: 95%; /* Lascia un piccolo margine laterale */
-    max-width: 600px; /* Larghezza massima per non essere troppo esteso */
-    margin: 20px auto; /* ✅ NUOVO: Centra l'intera sezione sotto l'H2 */
+    width: 95%; 
+    max-width: 600px;
+    margin: 20px auto; /* ✅ Questo centra il blocco della singola categoria */
     vertical-align: top;
     text-align: center; 
 }
