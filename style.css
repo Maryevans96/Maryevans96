@@ -86,35 +86,54 @@ p, .sottotitolo {
 }
 
 /* ==================================== */
-/* === SEZIONE COMPETENZE (Fixato il list-style) === */
+/* === SEZIONE COMPETENZE (Layout Orizzontale Fix) === */
 /* ==================================== */
 #competenze {
-    text-align: left; /* Allinea il testo all'interno a sinistra */
+    text-align: center; /* Centra il contenuto principale della sezione (H2) */
     margin-top: 40px;
     padding-top: 20px;
-    border-top: 1px solid rgba(13, 27, 42, 0.1); /* Separatore sottile */
+    border-top: 1px solid rgba(13, 27, 42, 0.1);
+    /* ✅ NUOVO: Imposta Flexbox sul contenitore per allineare le sezioni */
+    **display: flex;**
+    **flex-wrap: wrap;**
+    **justify-content: center;**
+    **gap: 20px;**
+}
+
+/* Rimuove l'allineamento a sinistra che avevamo sul contenitore principale per centrare i blocchi */
+#competenze > h2 { 
+    width: 100%; /* Assicura che il titolo vada a capo e sia centrato */
+}
+
+/* Stile per le singole sottosezioni (Linguistiche, Programmazione, Tecniche) */
+#competenze section {
+    **width: calc(33.33% - 20px);** /* 3 colonne con spazio per schermi larghi */
+    **min-width: 250px;** /* Fallback per schermi medi */
+    vertical-align: top;
+    text-align: left; /* Riporta il testo interno a sinistra */
+    margin-top: 0; /* Rimuove il vecchio margine superiore */
 }
 
 #competenze h3 {
     font-family: 'Poppins', sans-serif;
-    font-weight: 600; /* Leggermente più spesso */
+    font-weight: 600;
     font-size: 1.5em;
-    color: #0288d1; /* Colore blu del tema */
+    color: #0288d1;
     margin-top: 25px;
     margin-bottom: 10px;
-    border-left: 5px solid #ffb703; /* Barra verticale gialla */
+    border-left: 5px solid #ffb703;
     padding-left: 15px;
     display: block;
 }
 
 #competenze ul {
-    list-style-type: none; /* ✅ RIMOSSO I PALLINI */
+    list-style-type: none; 
     padding-left: 0;
     margin-bottom: 30px;
 }
 
 #competenze li {
-    background-color: rgba(255, 255, 255, 0.6); /* Sfondo chiaro per le voci */
+    background-color: rgba(255, 255, 255, 0.6);
     padding: 10px 15px;
     margin-bottom: 8px;
     border-radius: 8px;
@@ -132,18 +151,7 @@ p, .sottotitolo {
     font-weight: 600;
 }
 
-/* --- Layout flessibile per le sottosezioni su schermi più grandi --- */
-@media (min-width: 768px) {
-    #competenze section {
-        width: calc(33.33% - 20px); /* 3 colonne con spazio */
-        display: inline-block;
-        vertical-align: top;
-        margin-right: 15px;
-    }
-    #competenze section:last-child {
-        margin-right: 0;
-    }
-}
+/* La media query per 768px è stata rimossa, il Flexbox gestisce tutte le risoluzioni */
 /* ==================================== */
 /* === FINE REGOLE COMPETENZE === */
 /* ==================================== */
@@ -263,6 +271,7 @@ p, .sottotitolo {
 
 /* --- Responsive --- */
 @media (max-width: 767px) {
+    /* La gestione delle competenze è ora Flexbox, ma manteniamo la responsività dei social */
     .social-buttons {
         flex-direction: column;
         gap: 15px;
