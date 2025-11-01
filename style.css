@@ -86,10 +86,10 @@ p, .sottotitolo {
 }
 
 /* ==================================== */
-/* === SEZIONE COMPETENZE (Layout Orizzontale & Centrato Fix) === */
+/* === SEZIONE COMPETENZE (Layout Orizzontale & Centrato TOTALE) === */
 /* ==================================== */
 #competenze {
-    text-align: center; /* Centra il contenuto principale della sezione (H2) */
+    text-align: center; 
     margin-top: 40px;
     padding-top: 20px;
     border-top: 1px solid rgba(13, 27, 42, 0.1);
@@ -110,11 +110,12 @@ p, .sottotitolo {
     min-width: 250px;
     vertical-align: top;
     
-    /* ✅ NUOVO: Centra il testo all'interno di ogni colonna */
-    **text-align: center;** margin-top: 0;
+    /* ✅ Mantiene la centratura all'interno di ogni colonna */
+    text-align: center; 
+    margin-top: 0;
 }
 
-/* Riporta l'allineamento a sinistra solo per l'H3 per mantenere la barra verticale */
+/* Stile per i titoli H3 delle sottosezioni */
 #competenze h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -122,12 +123,27 @@ p, .sottotitolo {
     color: #0288d1;
     margin-top: 25px;
     margin-bottom: 10px;
-    border-left: 5px solid #ffb703;
-    padding-left: 15px;
-    display: block;
-    **text-align: left;** /* ✅ FIX: Allinea a sinistra solo l'H3 */
-    display: inline-block; /* Fai in modo che il blocco non occupi l'intera larghezza */
+    
+    /* Rimuove i vecchi bordi e padding per centrare il testo */
+    padding-left: 0;
+    border-left: none;
+    display: inline-block;
+    position: relative; /* Per posizionare l'elemento 'after' */
 }
+
+/* ✅ NUOVO: Aggiunge la linea verticale come elemento separato (per non rompere la centratura del testo) */
+#competenze h3::before {
+    content: '';
+    position: absolute;
+    left: -20px; /* Sposta la linea a sinistra dell'H3 */
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    width: 5px;
+    background-color: #ffb703; /* Barra verticale gialla */
+    border-radius: 3px;
+}
+
 
 #competenze ul {
     list-style-type: none; 
@@ -145,8 +161,10 @@ p, .sottotitolo {
     font-weight: 400;
     color: #0d1b2a;
     
-    /* ✅ AGGIUNTA: Rende l'elemento lista un blocco flessibile per poterlo centrare se ha dimensioni variabili */
-    **display: inline-block;**
+    /* ✅ NUOVO: Imposta una larghezza massima per le voci dell'elenco per centrarle */
+    **max-width: 90%;**
+    **margin: 0 auto 8px auto;** /* Centra l'elemento all'interno della sua colonna */
+    display: block; /* Deve essere block per usare margin: auto */
 }
 
 #competenze li:hover {
