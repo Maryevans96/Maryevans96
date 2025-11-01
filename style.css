@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap');
+
+
+
+/* --- Impostazioni globali --- */
+
+body {
+
+  font-family: 'Montserrat', sans-serif;
+
+  margin: 0;
+
+  padding: 0;
+
+  background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77);
+
+  color: #f2f2f2;
+
+  background: linear-gradient(135deg, #b3e5fc, #81d4fa, #4fc3f7, #0288d1);
+
+  color: #0d1b2a;
+
+  line-height: 1.8;
+
+  text-align: center;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: flex-start;
+
+  min-height: 100vh;
+
+}
+
+
+
+/* --- Contenitore --- */
+
+.container {
+
+  max-width: 900px;
+
+  background-color: rgba(255,255,255,0.08);
+
+  background-color: rgba(255,255,255,0.85);
+
+  border-radius: 16px;
+
+  padding: 40px;
+
+  margin: 50px 20px;
+
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+
+  box-shadow: 0 0 25px rgba(0,0,0,0.2);
+
+  backdrop-filter: blur(6px);
+
+}
+
+
+
+/* --- Titoli --- */
+
+h1, h2 {
+
+  font-family: 'Dancing Script', cursive;
+
+  letter-spacing: 1px;
+
+}
+
+
+
+h1 {
+
+  font-size: 3.8em;
+
+  color: #4dc2ff;
+
+  text-shadow: 0 0 12px rgba(77, 194, 255, 0.7);
+
+  margin-bottom: 10px;
+
+}
+
+
+
+h2 {
+
+  font-size: 2.2em;
+
+  color: #ffb703;
+
+  border-bottom: 3px solid #ffb703;
+
+  display: inline-block;
+
+  margin-top: 40px;
+
+  margin-bottom: 20px;
+
+}
+
+
+
+/* --- Testo generale --- */
+
+body, p, .sottotitolo {
+
+  font-family: 'Poppins', sans-serif;
+
+}
+
+
+
+.profile-image {
+
+  width: 270px !important;     /* forza larghezza */
+
+  height: 270px !important;    /* forza altezza */
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  display: block;
+
+  margin: 30px auto 40px;
+
+  border: 5px solid #ffaa00;
+
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
+
+.profile-image:hover {
+
+  transform: scale(1.05);
+
+  box-shadow: 0 0 35px rgba(255, 170, 0, 0.8);
+
+}
+
+
+
+/* --- Sezione Social --- */
+
+.social-links {
+
+  text-align: center;
+
+  margin-top: 60px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+}
+
+
+
+.social-links h2 {
+
+  text-align: center;
+
+  margin-bottom: 30px;
+
+  width: 100%;
+
+  color: #ff6f00;
+
+}
+
+
+
+/* --- Contenitore per i pulsanti orizzontali --- */
+
+.social-buttons {
+
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 20px;
+
+}
+
+
+
+/* --- Pulsanti ovali con icone colorate --- */
+
+.social-btn {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  border: 2px solid transparent;
+
+  border-radius: 50px;
+
+  color: white;
+
+  font-weight: 600;
+
+  font-size: 1.1em;
+
+  padding: 12px 25px;
+
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+}
+
+
+
+.social-btn i {
+
+  font-size: 1.4em;
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+}
+
+
+
+/* --- Colori specifici per ciascun social --- */
+
+.social-btn.linkedin {
+
+  background-color: #0077b5;
+
+  border-color: #0077b5;
+
+  background-color: #29b6f6;
+
+  border-color: #29b6f6;
+
+}
+
+
+
+.social-btn.github {
+
+  background-color: #333;
+
+  border-color: #333;
+
+  background-color: #0277bd;
+
+  border-color: #0277bd;
+
+}
+
+
+
+.social-btn.instagram {
+
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+
+  background: linear-gradient(135deg, #ffb74d, #fb8c00, #f4511e);
+
+  border: none;
+
+}
+
+
+
+.social-btn.efp {
+
+  background-color: #6c63ff;
+
+  border-color: #6c63ff;
+
+  background-color: #4dd0e1;
+
+  border-color: #4dd0e1;
+
+}
+
+
+
+.social-btn.libro {
+
+  background-color: #ffb703;
+
+  border-color: #ffb703;
+
+  background-color: #ffca28;
+
+  border-color: #ffca28;
+
+  color: #1b263b;
+
+}
+
+
+
+/* --- Effetto hover --- */
+
+.social-btn:hover {
+
+  transform: translateY(-4px);
+
+  filter: brightness(1.2);
+
+  box-shadow: 0 0 20px rgba(255,255,255,0.4);
+
+}
+
+
+
+/* --- Responsive --- */
+
+@media (max-width: 600px) {
+
+  .social-buttons {
+
+    flex-direction: column;
+
+    gap: 15px;
+
+  }
+
+}
+
+
+
+  .profile-image {
+
+    width: 150px;
+
+    height: 150px;
+
+  }
+
+.emoticons {
+
+  font-size: 2.5em;         /* più grandi */
+
+  margin-top: -10px;        /* meno spazio sopra */
+
+  margin-bottom: 15px;      /* meno spazio sotto */
+
+  text-align: center;       /* centratura perfetta */
+
+  animation: float 4s ease-in-out infinite;
+
+}
+
+
+
+/* Effetto leggero di galleggiamento */
+
+@keyframes float {
+
+  0%, 100% { transform: translateY(0); }
+
+  50% { transform: translateY(-4px); }
+
+}
+
+.social-btn.email {
+
+  background-color: #e63946; /* rosso acceso ma elegante */
+
+  color: #fff5f5;
+
+  border-color: #e63946;
+
+}
+
+
+
+.social-btn.email:hover {
+
+  background-color: #ff4d4d; /* rosso più chiaro al passaggio del mouse */
+
+  color: #0d1b2a;
+
+  transform: scale(1.05);
+
+}
+
+
+
+/* --- Popup email --- */
+
+.email-popup {
+
+  display: none;
+
+  position: fixed;
+
+  bottom: 30px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background-color: #1b263b;
+
+  color: #ffb703;
+
+  border: 2px solid #ffb703;
+
+  border-radius: 12px;
+
+  padding: 15px 25px;
+
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+
+  font-size: 1.1em;
+
+  z-index: 1000;
+
+}
+
+
+
+.email-popup .hint {
+
+  font-size: 0.8em;
+
+  color: #ffd166;
+
+  margin-top: 5px;
+
+}
+
+}
+
+
