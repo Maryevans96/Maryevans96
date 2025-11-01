@@ -89,29 +89,31 @@ p, .sottotitolo {
 /* === SEZIONE COMPETENZE (Layout Verticale & Centrato) === */
 /* ==================================== */
 #competenze {
-    text-align: center; 
+    text-align: center; /* Centra il titolo principale H2 */
     margin-top: 40px;
     padding-top: 20px;
     border-top: 1px solid rgba(13, 27, 42, 0.1);
-    
-    /* ✅ FIX DEFINITIVO: Rimuove l'impostazione Flexbox forzando il layout verticale (display: block è il default, ma lo reimpostiamo per sicurezza) */
-    **display: block;**
-    /* Rimuoviamo le proprietà Flexbox residue */
-    **flex-wrap: nowrap;**
-    **justify-content: flex-start;**
+    display: block; /* Deve essere in modalità blocco per la visualizzazione verticale */
+}
+
+/* Assicura che il titolo H2 vada a capo e sia centrato */
+#competenze > h2 { 
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 /* Stile per le singole sottosezioni (Linguistiche, Programmazione, Tecniche) */
 #competenze section {
-    width: 95%; 
+    /* ✅ FIX: Rimuoviamo width:95% per lasciare che max-width e margin:auto gestiscano il blocco */
     max-width: 600px;
-    margin: 20px auto; /* ✅ Questo centra il blocco della singola categoria */
-    vertical-align: top;
+    display: block; /* Forziamo il blocco per assicurare la pila verticale */
+    margin: 20px auto; /* ✅ Centra l'intera sezione sotto l'H2 */
     text-align: center; 
 }
 
 /* Stile per i titoli H3 delle sottosezioni */
 #competenze h3 {
+    /* ... (Regole h3 e ::before mantenute invariate per centratura e barra gialla) ... */
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 1.5em;
@@ -124,7 +126,6 @@ p, .sottotitolo {
     position: relative; 
 }
 
-/* Aggiunge la linea verticale come elemento separato */
 #competenze h3::before {
     content: '';
     position: absolute;
@@ -170,7 +171,6 @@ p, .sottotitolo {
 /* ==================================== */
 /* === FINE REGOLE COMPETENZE === */
 /* ==================================== */
-
 
 /* --- Sezione Social --- */
 .social-links {
