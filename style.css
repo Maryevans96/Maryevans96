@@ -86,17 +86,16 @@ p, .sottotitolo {
 }
 
 /* ==================================== */
-/* === SEZIONE COMPETENZE (Layout Orizzontale & Centrato TOTALE) === */
+/* === SEZIONE COMPETENZE (Layout Verticale & Centrato) === */
 /* ==================================== */
 #competenze {
-    text-align: center; 
+    text-align: center; /* Centra il titolo principale H2 */
     margin-top: 40px;
     padding-top: 20px;
     border-top: 1px solid rgba(13, 27, 42, 0.1);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    
+    /* ✅ RIMOSSO Flexbox: tornerà al layout di blocco verticale per default */
+    display: block; 
 }
 
 /* Assicura che il titolo H2 vada a capo e sia centrato */
@@ -106,13 +105,11 @@ p, .sottotitolo {
 
 /* Stile per le singole sottosezioni (Linguistiche, Programmazione, Tecniche) */
 #competenze section {
-    width: calc(33.33% - 20px);
-    min-width: 250px;
+    width: 95%; /* Lascia un piccolo margine laterale */
+    max-width: 600px; /* Larghezza massima per non essere troppo esteso */
+    margin: 20px auto; /* ✅ NUOVO: Centra l'intera sezione sotto l'H2 */
     vertical-align: top;
-    
-    /* ✅ Mantiene la centratura all'interno di ogni colonna */
     text-align: center; 
-    margin-top: 0;
 }
 
 /* Stile per i titoli H3 delle sottosezioni */
@@ -123,24 +120,22 @@ p, .sottotitolo {
     color: #0288d1;
     margin-top: 25px;
     margin-bottom: 10px;
-    
-    /* Rimuove i vecchi bordi e padding per centrare il testo */
     padding-left: 0;
     border-left: none;
     display: inline-block;
-    position: relative; /* Per posizionare l'elemento 'after' */
+    position: relative; 
 }
 
-/* ✅ NUOVO: Aggiunge la linea verticale come elemento separato (per non rompere la centratura del testo) */
+/* Aggiunge la linea verticale come elemento separato */
 #competenze h3::before {
     content: '';
     position: absolute;
-    left: -20px; /* Sposta la linea a sinistra dell'H3 */
+    left: -20px; 
     top: 50%;
     transform: translateY(-50%);
     height: 100%;
     width: 5px;
-    background-color: #ffb703; /* Barra verticale gialla */
+    background-color: #ffb703; 
     border-radius: 3px;
 }
 
@@ -161,10 +156,10 @@ p, .sottotitolo {
     font-weight: 400;
     color: #0d1b2a;
     
-    /* ✅ NUOVO: Imposta una larghezza massima per le voci dell'elenco per centrarle */
-    **max-width: 90%;**
-    **margin: 0 auto 8px auto;** /* Centra l'elemento all'interno della sua colonna */
-    display: block; /* Deve essere block per usare margin: auto */
+    /* Centra l'elemento all'interno della sua colonna */
+    max-width: 90%; 
+    margin: 0 auto 8px auto; 
+    display: block; 
 }
 
 #competenze li:hover {
