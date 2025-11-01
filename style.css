@@ -86,34 +86,35 @@ p, .sottotitolo {
 }
 
 /* ==================================== */
-/* === SEZIONE COMPETENZE (Layout Orizzontale Fix) === */
+/* === SEZIONE COMPETENZE (Layout Orizzontale & Centrato Fix) === */
 /* ==================================== */
 #competenze {
     text-align: center; /* Centra il contenuto principale della sezione (H2) */
     margin-top: 40px;
     padding-top: 20px;
     border-top: 1px solid rgba(13, 27, 42, 0.1);
-    /* ✅ NUOVO: Imposta Flexbox sul contenitore per allineare le sezioni */
-    **display: flex;**
-    **flex-wrap: wrap;**
-    **justify-content: center;**
-    **gap: 20px;**
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-/* Rimuove l'allineamento a sinistra che avevamo sul contenitore principale per centrare i blocchi */
+/* Assicura che il titolo H2 vada a capo e sia centrato */
 #competenze > h2 { 
-    width: 100%; /* Assicura che il titolo vada a capo e sia centrato */
+    width: 100%;
 }
 
 /* Stile per le singole sottosezioni (Linguistiche, Programmazione, Tecniche) */
 #competenze section {
-    **width: calc(33.33% - 20px);** /* 3 colonne con spazio per schermi larghi */
-    **min-width: 250px;** /* Fallback per schermi medi */
+    width: calc(33.33% - 20px);
+    min-width: 250px;
     vertical-align: top;
-    text-align: left; /* Riporta il testo interno a sinistra */
-    margin-top: 0; /* Rimuove il vecchio margine superiore */
+    
+    /* ✅ NUOVO: Centra il testo all'interno di ogni colonna */
+    **text-align: center;** margin-top: 0;
 }
 
+/* Riporta l'allineamento a sinistra solo per l'H3 per mantenere la barra verticale */
 #competenze h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -124,6 +125,8 @@ p, .sottotitolo {
     border-left: 5px solid #ffb703;
     padding-left: 15px;
     display: block;
+    **text-align: left;** /* ✅ FIX: Allinea a sinistra solo l'H3 */
+    display: inline-block; /* Fai in modo che il blocco non occupi l'intera larghezza */
 }
 
 #competenze ul {
@@ -141,6 +144,9 @@ p, .sottotitolo {
     transition: background-color 0.3s ease;
     font-weight: 400;
     color: #0d1b2a;
+    
+    /* ✅ AGGIUNTA: Rende l'elemento lista un blocco flessibile per poterlo centrare se ha dimensioni variabili */
+    **display: inline-block;**
 }
 
 #competenze li:hover {
@@ -150,8 +156,6 @@ p, .sottotitolo {
 #competenze li strong {
     font-weight: 600;
 }
-
-/* La media query per 768px è stata rimossa, il Flexbox gestisce tutte le risoluzioni */
 /* ==================================== */
 /* === FINE REGOLE COMPETENZE === */
 /* ==================================== */
@@ -271,7 +275,6 @@ p, .sottotitolo {
 
 /* --- Responsive --- */
 @media (max-width: 767px) {
-    /* La gestione delle competenze è ora Flexbox, ma manteniamo la responsività dei social */
     .social-buttons {
         flex-direction: column;
         gap: 15px;
