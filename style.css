@@ -231,18 +231,15 @@ p, .sottotitolo {
 }
 
 .social-btn.tryhackme {
-    /* Verde Menta chiaro */
-    background-color: #99FFCC; 
-    color: #111; /* Testo quasi nero per un buon contrasto */
-    border: 1px solid #66CC99; /* Aggiunge un bordo sottile per definirlo */
+    /* Un verde scuro distintivo */
+    background-color: #008000; 
+    color: white; /* Manteniamo il testo bianco per leggibilità */
 }
 
 .social-btn.tryhackme:hover {
-    /* Un verde menta leggermente più scuro quando ci passi sopra */
-    background-color: #66CC99;
-    color: white; /* Per farlo spiccare */
+    /* Un verde leggermente più chiaro per l'effetto hover */
+    background-color: #00a000;
 }
-
 .social-btn.instagram {
     background: linear-gradient(135deg, #ffb74d, #fb8c00, #f4511e);
     border: none;
