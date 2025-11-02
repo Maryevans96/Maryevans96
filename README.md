@@ -73,6 +73,7 @@ Queste schede vengono generate dinamicamente e mostrano la tua attività e le tu
 | **Email** | <span style="user-select: all;">mariagraziatoppi@libero.it</span> |
 | **LinkedIn** | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mariagraziatoppi96) |
 | **Portfolio** | [![Portfolio](https://img.shields.io/badge/Portfolio-100000?style=for-the-badge&logo=About.me&logoColor=white)](https://maryevans96.github.io/Maryevans96/) |
+| **TryHackMe** | [![TryHackMe](https://img.shields.io/badge/TryHackMe-5f5f5f?style=for-the-badge&logo=tryhackme&logoColor=white)](https://tryhackme.com/p/mariagraziatoppi) |
 | **EFP Fanfiction** | [![Fanfiction](https://img.shields.io/badge/EFP_Fanfiction-F58025?style=for-the-badge&logo=wordpress&logoColor=white)](https://efpfanfic.net/viewuser.php?uid=86518) |
 
 
