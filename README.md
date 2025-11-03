@@ -28,11 +28,11 @@ Dopo aver conseguito una triennale in **Scienze per l'Investigazione e la Sicure
 
 | Categoria | Dettaglio | 
 | :---: | :--- | 
-| 🌐 **Linguistiche** | **ITALIANO** (Madrelingua 🇮🇹) \| **INGLESE** (C1 🇬🇧) \| **FRANCESE** (B2 🇫🇷) \| **TEDESCO** (Base 🇩🇪) \| **RUSSO** (Base 🇷🇺) | 
-| 🖥️ **Sistemi & Strumenti** | **WINDOWS** \| **UBUNTU/LINUX** 🐧 \| **GITHUB** 🐙 \| **WIRESHARK** 🕵️‍♀️ \| **OFFICE SUITE** 📊 | 
-| 🎨 **Grafica & Design** | **GIMP** 🖼️ \| **CANVA** ✨ | 
-| 💻 **Linguaggi Core** | **C** ⚙️ \| **JAVA** ☕ \| **PYTHON** 🐍 \| **SQL** 💾 | 
-| 🔨 **Sviluppo Web** | **HTML/CSS** 🧱 | 
+| 🌐 **Linguistiche** | **ITALIANO** (Madrelingua ) \| **INGLESE** (C1) \| **FRANCESE** (B2) \| **TEDESCO** (A1) \| **RUSSO** (A1) | 
+| 🖥️ **Sistemi & Strumenti** | **WINDOWS** \| **UBUNTU/LINUX**  \| **GITHUB** \| **WIRESHARK** \| **OFFICE SUITE**  | 
+| 🎨 **Grafica & Design** | **GIMP**  \| **CANVA**  | 
+| 💻 **Linguaggi Core** | **C**  \| **JAVA**  \| **PYTHON**  \| **SQL**  | 
+| 🔨 **Sviluppo Web** | **HTML**  | 
 
 ---
 
@@ -66,7 +66,7 @@ Queste schede vengono generate dinamicamente e mostrano la tua attività e le tu
 
 ---
 
-## 🌐 Connettiamoci!
+## 🌐 Restiamo in contatto!
 
 | Piattaforma | Link |
 | :--- | :--- |
