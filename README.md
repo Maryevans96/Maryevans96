@@ -29,7 +29,7 @@ Dopo aver conseguito una triennale in **Scienze per l'Investigazione e la Sicure
 | Categoria | Dettaglio | 
 | :---: | :--- | 
 | 🌐 **Linguistiche** | **ITALIANO** (Madrelingua ) \| **INGLESE** (C1) \| **FRANCESE** (B2) \| **TEDESCO** (A1) \| **RUSSO** (A1) | 
-| 🖥️ **Sistemi & Strumenti** | **WINDOWS** \| **UBUNTU/LINUX**  \| **GITHUB** \| **WIRESHARK** \| **OFFICE SUITE**  | 
+| 🖥️ **Sistemi & Strumenti** | **WINDOWS** \| **UBUNTU/LINUX**  \| **GITHUB** \| **OFFICE SUITE**  | 
 | 🎨 **Grafica & Design** | **GIMP**  \| **CANVA**  | 
 | 💻 **Linguaggi Core** | **C**  \| **JAVA**  \| **PYTHON**  \| **SQL**  | 
 | 🔨 **Sviluppo Web** | **HTML**  | 
